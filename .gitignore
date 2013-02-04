@@ -1,0 +1,17 @@
+*_ReSharper*
+*.user
+*.suo
+*.dbmdl
+*.schemaview
+*.log
+*[Bb]in/
+*[Oo]bj/
+*[Dd]ebug/
+*TestResults/
+*[Ll]og.txt
+*.vssscc
+*.ReSharper
+*.vspscc
+*.sublime-project
+
+*.sublime-workspace
