@@ -42,7 +42,11 @@ namespace TfsProxy.Web.Controllers
                             CollectionId = collectionId.ToString(),
                             ProjectName = project.Name,
                             ProjectUri = project.Uri.ToString(),
-                            WorkItemTypes = project.WorkItemTypes.Cast<WorkItemType>().Select(wit => wit.Name).ToList()
+                            WorkItemTypes = project.WorkItemTypes
+                                .Cast<WorkItemType>()
+                                .Select(wit => wit.Name)
+                                .OrderBy(name => name)
+                                .ToList()
                         };
 
                         projects.Add(projectInfo);
