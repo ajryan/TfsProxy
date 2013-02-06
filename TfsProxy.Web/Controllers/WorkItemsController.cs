@@ -35,6 +35,7 @@ namespace TfsProxy.Web.Controllers
             {
                 wiql += String.Format(" AND [System.WorkItemType] = '{0}'", workItemType);
             }
+            wiql += " order by [System.ChangedDate] desc, [System.CreatedDate] desc";
             var query = workItemStore.Query(wiql);
 
             return query
